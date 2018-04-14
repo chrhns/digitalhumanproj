@@ -1,5 +1,5 @@
 To Make Game Work:
-https://pypi.python.org/pypi/tale/
+https://pythonhosted.org/tale/
 
 Follow instructions at above website
 
