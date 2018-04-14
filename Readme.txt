@@ -1,5 +1,5 @@
 To Make Game Work:
-https://pythonhosted.org/tale/
+http://tale.readthedocs.io/en/latest/
 
 Follow instructions at above website
 
