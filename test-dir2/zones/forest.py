@@ -49,17 +49,17 @@ class Owl(Living):
             self.location.tell("%s hoots curiously." % capital(self.title))
         else:
             self.location.tell("%s watches intently." % capital(self.title))
-        # it's possible to stop the periodical calling by setting:  call_periodically(0)(Cat.do_purr)
+        
 
     def notify_action(self, parsed: ParseResult, actor: Living) -> None:
         if actor is self or parsed.verb in self.verbs:
-            return  # avoid reacting to ourselves, or reacting to verbs we already have a handler for
+            return  
         if parsed.verb in ("pet", "stroke", "tickle", "cuddle", "hug", "caress", "rub"):
             self.tell_others("{Actor} leans in to the affection.")
         elif parsed.verb in AGGRESSIVE_VERBS:
-            if self in parsed.who_info:   # only give aggressive response when directed at the cat.
+            if self in parsed.who_info:   
                 self.tell_others("{Actor} clicks its beak aggressively!" % self.objective)
-        elif parsed.verb in ("hello", "hi", "greet", "meow", "purr"):
+        elif parsed.verb in ("hello", "hi", "greet"):
             self.tell_others("{Actor} stares at {target} incomprehensibly.", target=actor)
         else:
             message = (parsed.message or parsed.unparsed).lower().split()
@@ -67,7 +67,7 @@ class Owl(Living):
                 self.tell_others("{Actor} looks up at {target} and flaps %s wings." % self.possessive, target=actor)
 
 
-owl = Owl("Artemis", "m", race="cat", descr="A noble and wise owl.")
+owl = Owl("Artemis", "m", race="bird", descr="A noble and wise owl.")
 camp.insert(owl, None)
 #key = Key("key", "small rusty key", descr="This key is small and rusty. It has a label attached, reading \"garden door\".")
 #key.key_for(door)

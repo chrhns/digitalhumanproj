@@ -6,9 +6,9 @@ by Chris - chines@chapman.edu
 
 import sys
 from typing import Optional
+
 from tale.driver import Driver
 from tale.player import Player
-from tale.story import *
 from tale.story import *
 
 
