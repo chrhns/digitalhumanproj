@@ -15,13 +15,6 @@ from tale.verbdefs import AGGRESSIVE_VERBS
 
 # define the various locations
 
-#class GameEnd(Location):
-    #def notify_player_arrived(self, player: Player, previous_location: Location) -> None:
-        # player has entered, and thus the story ends
-        #player.tell("\n")
-        #player.tell("\n")
-        #player.tell("<bright>Congratulations on escaping the house!</> Someone else has to look after Garfield now though...")
-        #raise StoryCompleted
 
 
 camp = Location("Camp", "You sit upon a wooden log in the old campside, the fire crackling and providing you with warmth."
@@ -69,7 +62,5 @@ class Owl(Living):
 
 owl = Owl("Artemis", "m", race="bird", descr="A noble and wise owl.")
 camp.insert(owl, None)
-#key = Key("key", "small rusty key", descr="This key is small and rusty. It has a label attached, reading \"garden door\".")
-#key.key_for(door)
-#camp.insert(key, None)
+
 
